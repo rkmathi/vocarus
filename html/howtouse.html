@@ -1,0 +1,41 @@
+{% extends "_layout.html" %}
+
+{% block header_and_script %}{% endblock %}
+</head>
+
+<body>
+  <div id="wrapper"><!-- div#wrapper -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}
+  <div id="main" class="clearfix"><!-- #main -->
+    <h2>使い方</h2>
+    <section class="use dot">
+      <h4>1. vsq/vsqxファイルを選択してください</h4>
+      <div><img src="../images/select.png" alt="ファイルを選ぶ" /></div>
+      <div class="clearfix"></div><p><span style="color: #ffbb00; font-weight: bold;">※現在は転調を含まない楽曲のみの対応です。</span><br />トラックが１つのvsq/vsqxファイルを使用できます。<br>使用できるのはファイルサイズが200KB以下のファイルです。</p>
+    </section>
+      
+    <section class="use_right dot">
+      <h4>2. 選択されたファイルを確認してください</h4>
+      <div><img src="../images/display.png" alt="ファイルを選ぶ"><p>生成されるファイルが正しいかどうか確認してください。</p></div>
+    </section>
+    
+    <section class="use dot">
+      <h4>3. コーラスボタンを押し、ダウンロードしてください</h4>
+      <img src="../images/download.png" alt="ダウンロード">
+      <p>３種類のコーラスをダウンロードすることができます。</p>
+    </section>
+    
+    <section class="use_right dot">
+      <h4>4. VOCALOID Editorでインポートしてください</h4>
+      <img src="../images/load.png" alt="読み込み">
+      <p>VOCALOID Editorを起動し、「ファイル」→「読み込み」を押してダウンロードしたファイルを選択すると、生成されたコーラスが新しいトラックとして追加されます。</p>
+    </section>
+  </div><!-- #main fin -->
+{% endblock %}
+
+{% block wrapper_footer %}{% endblock %}
+  </div><!-- div#wrapper -->
+</body>
+</html>

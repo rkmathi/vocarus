@@ -1,0 +1,30 @@
+application: vocalochorus
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /images
+  static_dir: images
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /audio/(.+\.ogg)
+  static_files: audio/\1
+  upload: audio/(.+\.ogg)
+  mime_type: audio/ogg
+
+- url: /audio
+  static_dir: audio
+
+- url: .*
+  script: main.py
+

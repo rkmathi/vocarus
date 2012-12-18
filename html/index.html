@@ -1,0 +1,117 @@
+{% extends "_layout.html" %}
+
+{% block header_and_script %}
+  <script type="text/javascript" src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
+  <script type="text/javascript" src="js/fileupload.js"></script>
+  <script type="text/javascript" src="js/daily_illust.js"></script>
+{% endblock %}
+</head>
+
+<body>
+  <div id="wrapper"><!-- div#wrapper -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}
+    <div id="main" class="clearfix"><!-- #main -->
+      <section class="miku">
+      </section>
+
+      <section class="exp content_bg">
+        <h4>筑波大学情報学群 情報特別演習/情報メディア特別演習</h4>
+        <p class="expl">
+        本サイトは、上記学類の2012年度演習科目の成果物です。
+        </p>
+      </section>
+
+      <section class="exp">
+      <h3>自動コーラスパート生成システム</h3>
+      <p class="expl">vocarusは、あなたがアップロードしたvsq/vsqxファイルから、構成音よりコードを自動推定して３つのコーラスパートを生成するWebアプリケーションです。<br />表現豊かな楽曲制作をお手伝いします。</p>
+      <p class="expl">
+      </span>
+      </p>
+      </section>
+
+      <section class="new">
+      <h2><img src="images/whnew.png" alt="What's new?"></h2>
+      <div class="content_bg">
+        <div class="news">
+        <dl>
+          <dt>2012.12.18</dt>
+          <dd>&nbsp;&nbsp;V3(vsqx)ファイルに対応しました。</dd>
+          <dt>2012.10.18</dt>
+          <dd>&nbsp;&nbsp;イラストの日替わりにミクを追加しました。</dd>
+          <dt>2012.10.05</dt>
+          <dd>&nbsp;&nbsp;イラスト・サンプル曲を日替わりローテーションで公開しました。</dd>
+          <dt>2012.09.28</dt>
+          <dd>&nbsp;&nbsp;イラスト・サンプル曲に巡音ルカを採用しました</dd>
+          <dt>2012.09.20</dt>
+          <dd>&nbsp;&nbsp;イラスト・サンプル曲にGUMIを採用しました</dd>
+          <dt>2012.08.06</dt>
+          <dd>&nbsp;&nbsp;コード譜を追加しました。</dd>
+          <dt>2012.08.01</dt>
+          <dd>&nbsp;&nbsp;サンプルデモソングを変えました。</dd>
+          <dt>2012.07.17</dt>
+          <dd>&nbsp;&nbsp;IE8の動作に対応しました</dd>
+          <dt>2012.07.16</dt>
+          <dd>&nbsp;&nbsp;IE9、Safariなどの動作に対応しました</dd>
+          <dt>2012.07.10</dt>
+          <dd>&nbsp;&nbsp;文章、デモソングを修正しました</dd>
+          <dt>2012.07.09</dt>
+          <dd>&nbsp;&nbsp;vocarus Major Scale（長調）版公開！！</dd>
+        </dl>
+      </div>
+      </div>
+      </section>
+    </div><!-- #main fin -->
+
+    <section class="demo"><!-- section.demo -->
+    <h2><img src="images/demo.png" alt="Demo"></h2>
+    <div class="demo_content content_bg">
+      <p>曲名:クイカイマニマニ</p>
+      <p>音源:VOCALOID&trade;3 VY1V3</p>
+      <p class="audio_text">vocarus使用前</p>
+      <audio class="bubble" controls>
+      <source src="audio/quikwai_before.ogg" type="audio/ogg">
+      <source src="audio/quikwai_before.mp3" type="audio/mpeg">
+      <p>このブラウザはAudio要素に対応していません</p>
+      </audio>
+      <p class="audio_text">vocarus使用後</p>
+      <audio class="bubble" controls>
+      <source src="audio/quikwai_after.ogg" type="audio/ogg">
+      <source src="audio/quikwai_after.mp3" type="audio/mpeg">
+      <p>このブラウザはAudio要素に対応していません</p>
+      </audio>
+      <p><a href="service">vocarusについて</a>のページで他のサンプルを聞けます。</p>
+    </div>
+    </section><!-- section.demo fin -->
+
+    <section class="create clearfix"><!-- section.create_clearfix -->
+    <h2><img src="images/create.png" alt="Create!"></h2>
+    <div class="create_content content_bg">
+      <form  name="parts" action="/parse" enctype="multipart/form-data" id="hand" method="post">
+        <div id="upload">
+          <img src="images/folder.png" id="upload_image">
+          <input type="file" id="upload_form" class="file" name="file">
+          <input type="reset" id="reset" value="リセット" />
+        </div>
+        <p>ファイル選択<span class="alertspan"> ファイル名は、半角英数のみを用いてください。</span></p>
+
+        <div id="service" class="footer_bg">
+          <div id="files_info"></div>
+        </div>
+        <p class="left">詳細は<a href="howtouse">使い方</a>のページをお読みください。</p>
+        <p class="download">
+        <input type="submit" name="lyric_card" value="コード譜">
+        <input type="submit" name="chorus1" value="コーラス1">
+        <input type="submit" name="chorus2" value="コーラス2">
+        <input type="submit" name="chorus3" value="コーラス3">
+        </p>
+      </form>
+    </div>
+    </section><!-- section.create_clearfix fin -->
+{% endblock %}
+
+{% block wrapper_footer %}{% endblock %}
+  </div><!-- div#wrapper fin -->
+</body>
+</html>

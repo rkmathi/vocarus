@@ -1,0 +1,23 @@
+{% extends "_layout.html" %}
+
+{% block header_and_script %}{% endblock %}
+</head>
+
+<body>
+  <div id="wrapper"><!-- div#wrapper -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}
+  <div id="main"><!-- main -->
+    <h2>エラー！！</h2>
+    <div class="sub_content content_bg">
+      <p>不正なvsqファイルです！<br>
+      正しいvsqファイルを選択して、もう一度コーラスを生成してください。</p>
+    </div>
+    <h3><a href="/">もどる</a></h3>
+  </div><!-- main fin -->
+{% endblock %}
+  </div><!-- div#wrapper -->
+</body>
+</html>
+

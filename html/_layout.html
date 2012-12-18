@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie" lang="ja"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ja"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>vocarus</title>
+  <meta name="description" content="vocarusは、あなたがアップロードしたvsq/vsqxファイルから、構成音よりコードを自動推定して３つのコーラスパートを生成するWebアプリケーションです。表現豊かな楽曲制作をお手伝いします。">
+  <meta name="keywords" content="vocarus, ぼからす, vocaloid, ボーカロイド, ボーカロイドUGC">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33231731-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+  </script>
+{% block header_and_script %}{% endblock %}
+</head>
+
+<body>
+  <div id="wrapper"><!-- div#wrapper -->
+  
+    <header id="header" class="clearfix"><!-- #header -->
+    <h1 id="title"><a href="/"><img src="images/vocarus.png" alt="vocarus"></a></h1>
+    <nav>
+    <div class="nav1">
+      <a href="/service" class="nv">
+        <img src="images/minimiku40.png" alt="vocarusについて" class="centered">
+      </a>
+      <p class="nowrap">vocarusについて</p>
+    </div>
+
+    <div class="nav2">
+      <a href="/howtouse" class="nv">
+        <img src="images/chibimiku40.png" alt="使い方" class="centered">
+      </a>
+      <p class="nowrap">使い方</p>
+    </div>
+
+    <div class="nav3">
+      <a href="/contact" class="nv">
+        <img src="images/contact.png" alt="コンタクト" class="centered">
+      </a>
+      <p class="nowrap">コンタクト</p>
+    </div>
+    </nav>
+    </header><!-- #header fin -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}{% endblock %}
+
+    <footer id="footer" class="clearfix"><!-- footer -->
+    <section class="twitter_features footer_bg">
+    <div class="footer_contents">
+      <a href="https://twitter.com/#!/voca_rus">
+        <img src="images/twitter.png" alt="Twitter">
+      </a>
+      <p class="text_footer">Twitter</p>
+    </div>
+    </section>
+
+    <section class="facebook_features footer_bg">
+    <div class="footer_contents">
+      <a href="http://facebook.com/vocarus">
+        <img src="images/facebook.png" alt="Facebook" />
+      </a>
+      <p class="text_footer">Facebook</p>
+    </div>
+    </section>
+
+    <section class="itf_features footer_bg">
+    <div class="footer_contents">
+      <a href="http://www.coins.tsukuba.ac.jp/">
+        <img src="images/coins.png" alt="情報科学類">
+      </a>
+      <p class="text_footer">情報科学類</p>
+      <a href="http://www.mast.tsukuba.ac.jp/">
+        <img src="images/mast.png" alt="情報メディア創成学類">
+      </a>
+      <p class="text_footer">情報メディア創成学類</p>
+    </div>
+    </section>
+    <span class="subspan">VOCALOID&trade;はヤマハ株式会社の登録商標です。</span>
+    </footer><!-- footer fin -->
+  {% block wrapper_footer %}{% endblock %}
+  </div><!-- div#wrapper fin -->
+</body>
+</html>
+

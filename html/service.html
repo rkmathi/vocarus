@@ -1,0 +1,87 @@
+{% extends "_layout.html" %}
+
+{% block header_and_script %}
+  <script type="text/javascript" src="js/daily_sounds.js"></script>
+  <script type="text/javascript" src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
+{% endblock %}
+</head>
+
+
+<body>
+<div id="wrapper"><!-- div#wrapper -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}
+<div id="main" class="clearfix"><!-- #main -->
+  <h2>vocarusについて</h2>
+  <section class="explanation">
+    <h3 class="expl">自動でコーラスパートを生成します</h3>
+    <div class="expl2">
+     <p>vocarusは、あなたがアップロードしたvsqファイルからコードを自動推定しコーラスパートを生成するWebアプリケーションです。<br />アップロードされたファイルから主旋律を読み取り、調及びコードを推定し、その結果に基づいてコーラスパートを組み立てる処理を行います。</p>
+    </div>
+  </section>
+
+  <div class="content_bg service_demo">
+    <p class="service_text">vocarus使用前</p>
+    <p class="service_text">vocarus使用後</p>
+  </div>
+
+  <section class="explanation">
+    <h3 class="expl">筑波大学UGC創作支援プロジェクトについて</h3>
+    <div class="expl2"><p>vocarusは、一般の人々によって作成されるコンテンツの創作支援を目的とした、DTM-UGC(User-Generated Content)創作支援プロジェクトが運営しています。<br/>同プロジェクトは2012年度から始まった筑波大学の情報科学類・情報メディア創成学類の特別演習（２年次集中）の１つのテーマとして開設されました。</p>
+    <span class="alertspan">※当Webページで使用されるイラストは<a href="http://piapro.jp/license/pcl/summary">ピアプロ・キャラクターライセンス</a>に基づいてクリプトン・フューチャー・メディア株式会社のキャラクター「初音ミク」「巡音ルカ」を描いたものです。</span>
+    </div>
+  </section>
+
+  <div class="content_bg service_demo">
+    <p class="service_text">vocarus使用前</p>
+    <p class="service_text">vocarus使用後</p>
+  </div>
+
+  <section class="left">
+    <h3 class="expl">開発者</h3>
+    <div class="expl2">
+      <p>vocarus開発者一覧です。<br />Twitterアカウント or ハンドルネームとなっています。</p>
+      <p>&nbsp;</p>
+      <p>第一期</p>
+      <table width="450" cellspacing="3px" class="expl3">
+        <tr>
+          <td width="150">伊東翼</td>
+          <td width="150">大野誠</td>
+          <td width="150"><a href="https://twitter.com/AmatsukiKu">@AmatsukiKu</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://twitter.com/lithtle">@lithtle</a></td>
+          <td><p></p></td>
+          <td><p></p></td>
+        </tr>
+      </table>
+      <p>第二期</p>
+      <table width="450" cellspacing="3px" class="expl3">
+        <tr>
+          <td width="150"><span>神武</span></td>
+          <td width="150"><a href="https://twitter.com/esparra_gos">@esparra_gos</a></td>
+          <td width="150"><a href="https://twitter.com/rkmathi">@rkmathi</a></td>
+        </tr>
+      </table>
+      <p>イラスト</p>
+      <table width="300" cellspacing="3px" class="expl3">
+        <tr>
+        <td><a href="https://twitter.com/lizhi3">飯田のぎ(芸術専門学群)</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <div class="content_bg service_demo">
+    <p class="service_text">vocarus使用前</p>
+    <p class="service_text">vocarus使用後</p>
+  </div>
+
+</div><!-- #main fin -->
+{% endblock %}
+
+{% block wrapper_footer %}{% endblock %}
+</div><!-- div#wrapper -->
+</body>
+</html>

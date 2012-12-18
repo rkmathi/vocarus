@@ -1,0 +1,54 @@
+{% extends "_layout.html" %}
+
+{% block header_and_script %}{% endblock %}
+</head>
+
+
+<body>
+  <div id="wrapper"><!-- div#wrapper -->
+{% block wrapper_header %}{% endblock %}
+
+{% block wrapper_main %}
+<div id="main" class="clearfix"><!-- #main -->
+  <h2>コンタクト</h2>
+  <section class="left">
+  <h3 class="expl">フィードバックを募集してます</h3>
+  <div class="expl2"><p>vocarusでは、さらに便利で役に立つアプリケーションにしていくために、クリエイター様からのフィードバックを募集しています。<br />ご感想、ご意見などが有りましたら、<a href="mailto:vocarus.lab+contact@gmail.com?subject=vocarusサポートメール&amp">メール</a>、<a href="http://twitter.com/voca_rus">Twitter</a>、<a href="https://www.facebook.com/vocarus">Facebook</a>からコンタクトしていただけますと幸いです。</p></div>
+  </section>
+  <div class="contact">
+    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 320,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#ffbb00'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().setUser('voca_rus').start();
+    </script>
+  </div>
+</div><!-- #main fin -->
+{% endblock %}
+
+{% block wrapper_footer %}{% endblock %}
+  </div><!-- div#wrapper -->
+</body>
+</html>
