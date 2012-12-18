@@ -1,5 +1,7 @@
 # vocarus #
 
+### !! Without audio, images, autochorus !! ###
+
 ## Change Log ##
 
 2012/12/18
